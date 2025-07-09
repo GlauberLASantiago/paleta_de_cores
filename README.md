@@ -26,12 +26,6 @@ Este projeto é uma página HTML interativa que apresenta uma coleção curada d
 
 <br>
 
-<div align="center">
-  <img src="https://placehold.co/800x400/E0FBFC/3D5A80?text=Prévia+do+App" alt="Prévia da aplicação Gerador de Paletas de Cores" style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-</div>
-
-<br>
-
 ---
 
 ## ✨ Funcionalidades
