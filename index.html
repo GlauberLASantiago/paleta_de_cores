@@ -24,11 +24,10 @@
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-10">
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Gerador de Paletas de Cores</h1>
-            <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">Explore 22 paletas de cores selecionadas e copie os códigos com um clique.</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">Explore paletas de cores selecionadas e copie os códigos com um clique.</p>
         </header>
 
         <main class="space-y-8">
-            <!-- Paleta 0: Grupo Horizonte -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all border-2 border-blue-500">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Grupo Horizonte</h3>
@@ -46,14 +45,30 @@
                     </button>
                 </div>
             </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">ENEC</h3>
+                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
+                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#1E40FB;">#1E40FB</div>
+                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#FC0019;">#FC0019</div>
+                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#FECF2F;">#FECF2F</div>
+                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#1FD025;">#1FD025</div>
+                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#434344;">#434344</div>
+                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black border" style="background-color:#F9F9F9;">#F9F9F9</div>
+                    </div>
+                    <span id="paletteENEC" class="hidden">#1E40FB, #FC0019, #FECF2F, #1FD025, #434344, #F9F9F9</span>
+                    <button onclick="copyToClipboard('paletteENEC', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
+                        Copiar Cores
+                    </button>
+                </div>
+            </div>
 
-            <!-- Novas Paletas Temáticas -->
             <div class="text-center my-12">
                 <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">Paletas Temáticas</h2>
                 <hr class="w-24 h-1 bg-blue-500 mx-auto mt-2 mb-4 border-0 rounded">
             </div>
 
-            <!-- TEMA: Anos 1950 -->
             <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Animação Anos 1950</h3>
             
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
@@ -99,7 +114,6 @@
                 </div>
             </div>
 
-            <!-- TEMA: Anos 1970 -->
             <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Estilo Anos 1970</h3>
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
@@ -130,7 +144,6 @@
                 </div>
             </div>
 
-            <!-- TEMA: Pós-Apocalíptico -->
             <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Pós-Apocalíptico</h3>
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
@@ -175,7 +188,6 @@
                 </div>
             </div>
 
-            <!-- TEMA: Ásia -->
             <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Inspiração Asiática</h3>
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
@@ -220,7 +232,6 @@
                 </div>
             </div>
 
-            <!-- TEMA: O Iluminado -->
             <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Filme "O Iluminado"</h3>
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
@@ -265,13 +276,11 @@
                 </div>
             </div>
 
-            <!-- Paletas Anteriores -->
             <div class="text-center my-12">
                 <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">Paletas Originais</h2>
                 <hr class="w-24 h-1 bg-blue-500 mx-auto mt-2 mb-4 border-0 rounded">
             </div>
 
-            <!-- Paleta 1: Doce Sonho Pastel -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Doce Sonho Pastel</h3>
@@ -290,7 +299,6 @@
                 </div>
             </div>
 
-            <!-- Paleta 2: Jardim de Primavera -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Jardim de Primavera</h3>
@@ -309,7 +317,6 @@
                 </div>
             </div>
             
-            <!-- Paleta 3: Pôr do Sol no Cerrado -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pôr do Sol no Cerrado</h3>
@@ -328,7 +335,6 @@
                 </div>
             </div>
 
-            <!-- Paleta 4: Névoa da Manhã -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Névoa da Manhã</h3>
@@ -347,7 +353,6 @@
                 </div>
             </div>
 
-            <!-- Paleta 5: Joias Tropicais -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Joias Tropicais</h3>
@@ -366,7 +371,6 @@
                 </div>
             </div>
 
-            <!-- Paleta 6: Oceano Profundo -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Oceano Profundo</h3>
