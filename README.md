@@ -1,60 +1,25 @@
-🎨 Gerador de Paletas de Cores 🎨
-<div align="center">
-<p>
-Uma aplicação web simples e elegante para explorar, visualizar e copiar paletas de cores temáticas.
-</p>
-<p>
-Criado para designers, desenvolvedores e entusiastas de cores que precisam de inspiração rápida e funcional.
-</p>
-</div>
+# 🎨 Gerador de Paletas de Cores 🎨
 
-🌟 Visão Geral do Projeto
-Este projeto é uma página HTML interativa que apresenta uma coleção curada de 22 paletas de cores. Cada paleta é exibida visualmente, e com um único clique, os códigos hexadecimais correspondentes podem ser copiados para a área de transferência, prontos para serem usados em qualquer ferramenta de design ou desenvolvimento.
+> [!IMPORTANT]
+> ### 🚀 Este projeto evoluiu e mudou de casa!
+> 
+> O catálogo de paletas de cores agora faz parte do **[Gl Cores Fontes e Fundos](https://github.com/GlauberLASantiago/gl-cores-fontes-e-fundos)**, uma suíte visual unificada e expandida contendo:
+> - 🎨 **+50 Paletas de Cores** com visualizador interativo, modos diurno/noturno e cópia de prompt pronta para IA (*vibe coding*).
+> - 🖼️ **180 Fundos Visuais** em altíssima resolução catalogados por temas e estilos.
+> - 🔤 **40 Combinações Tipográficas** com prévias reais de títulos, subtítulos e textos corridos do Google Fonts.
+> 
+> 👉 **Acesse a nova aplicação online:** [https://glauberlasantiago.github.io/gl-cores-fontes-e-fundos/](https://glauberlasantiago.github.io/gl-cores-fontes-e-fundos/)  
+> 👉 **Repositório oficial atualizado:** [GlauberLASantiago/gl-cores-fontes-e-fundos](https://github.com/GlauberLASantiago/gl-cores-fontes-e-fundos)
 
-✨ Funcionalidades
-Visualização Imediata: Veja como as cores de cada paleta se combinam.
+---
 
-Cópia Fácil: Botão "Copiar Cores" que prepara um prompt formatado (ex: Utilize a seguinte paleta de cores: #BCDFB9, #C87F8B, ...) para uso imediato.
+## 📦 Histórico do Projeto Legado
 
-Design Responsivo: Interface limpa e funcional em qualquer dispositivo, construída com Tailwind CSS.
+Esta versão legada do aplicativo contava com 22 paletas de cores iniciais.
+Se desejar consultar o código histórico deste repositório, ele permanece disponível em [`antigo.html`](antigo.html).
 
-Grande Variedade de Temas: Inclui 22 paletas organizadas por temas criativos, como:
+---
 
-Retrô (Anos 1950 e 1970)
-
-Pós-apocalíptico
-
-Inspiração Asiática
-
-Cinematográfico (O Iluminado)
-
-Tons Pastéis e muito mais!
-
-Código Leve: Feito com HTML, CSS (via Tailwind CDN) e JavaScript puro, sem dependências complexas.
-
-🚀 Como Usar
-Abra o arquivo index.html em qualquer navegador web moderno.
-
-Navegue pelas paletas para encontrar a inspiração que procura.
-
-Clique no botão "Copiar Cores" da paleta desejada.
-
-Cole o texto copiado na sua ferramenta de IA, software de design (Figma, Photoshop) ou no seu editor de código (VS Code).
-
-🎨 Exemplo de Paleta no App
-Para que o README exiba uma prévia visual da paleta, siga estes passos:
-
-Tire um print screen (captura de tela) de uma das paletas no seu aplicativo.
-
-Salve essa imagem na pasta do seu projeto com o nome exemplo-paleta.png.
-
-A imagem aparecerá automaticamente abaixo.
-
-🛠️ Tecnologias Utilizadas
-HTML5: Para a estrutura da página.
-
-Tailwind CSS: Para estilização rápida e responsiva.
-
-JavaScript: Para a funcionalidade de cópia para a área de transferência.
-
-Google Fonts: Para a tipografia (família de fontes 'Inter').
+### Créditos
+Desenvolvido pelo professor **Dr. Glauber Santiago** — DAC/UFSCar  
+Apoio: [Grupo de Pesquisa Horizonte](https://grupohorizonte.ufscar.br/) | [🌐 Website do Docente](https://servidores.ufscar.br/glauber/)

@@ -3,438 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Paletas de Cores</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Redirecionando para Gl Cores Fontes e Fundos...</title>
+    
+    <!-- Redirecionamento Automático em 3 segundos -->
+    <meta http-equiv="refresh" content="3; url=https://glauberlasantiago.github.io/gl-cores-fontes-e-fundos/paletas.html">
+    <link rel="canonical" href="https://glauberlasantiago.github.io/gl-cores-fontes-e-fundos/paletas.html">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* Estilo para a fonte Inter */
-        body {
-            font-family: 'Inter', sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         }
-        /* Efeito de transição suave nos botões e cards */
-        .transition-all {
-            transition: all 0.3s ease-in-out;
+
+        body {
+            background-color: #0b0f19;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(244, 63, 94, 0.08) 0px, transparent 50%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .redirect-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1.5rem;
+            max-width: 580px;
+            width: 100%;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.15);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 9999px;
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-box {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-pills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pill {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.75rem;
+            font-size: 0.82rem;
+            color: #cbd5e1;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #9333ea 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-radius: 1rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.7);
+            filter: brightness(1.1);
+        }
+
+        .countdown {
+            margin-top: 1.25rem;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        .countdown strong {
+            color: #38bdf8;
+        }
+
+        .repo-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: color 0.2s ease;
+        }
+
+        .repo-link:hover {
+            color: #94a3b8;
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 sm:p-6 md:p-8">
+<body>
+    <div class="redirect-card">
+        <div class="badge">
+            <span>✨</span> Novo Endereço
+        </div>
+        
+        <div class="icon-box">🚀</div>
+        
+        <h1>O App Evoluiu e Mudou de Casa!</h1>
+        
+        <p>
+            O gerador de paletas agora faz parte do ecossistema completo <strong>Gl Cores Fontes e Fundos</strong>, trazendo muito mais recursos para o seu fluxo criativo e <em>vibe coding</em>.
+        </p>
 
-    <div class="max-w-4xl mx-auto">
-        <header class="text-center mb-10">
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Gerador de Paletas de Cores</h1>
-            <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">Explore paletas de cores selecionadas e copie os códigos com um clique.</p>
-        </header>
+        <div class="features-pills">
+            <span class="pill">🎨 +50 Paletas Harmoniosas</span>
+            <span class="pill">🖼️ 180 Fundos em Alta Resolução</span>
+            <span class="pill">🔤 40 Pares Tipográficos Google Fonts</span>
+        </div>
 
-        <main class="space-y-8">
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all border-2 border-blue-500">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Grupo Horizonte</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#BCDFB9;">#BCDFB9</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#C87F8B;">#C87F8B</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#E9A97F;">#E9A97F</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#E7F0C7;">#E7F0C7</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#000000;">#000000</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black border" style="background-color:#FFFFFF;">#FFFFFF</div>
-                    </div>
-                    <span id="palette0" class="hidden">#BCDFB9, #C87F8B, #E9A97F, #E7F0C7, #000000, #FFFFFF</span>
-                    <button onclick="copyToClipboard('palette0', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">ENEC</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#1E40FB;">#1E40FB</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#FC0019;">#FC0019</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#FECF2F;">#FECF2F</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#1FD025;">#1FD025</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#434344;">#434344</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black border" style="background-color:#F9F9F9;">#F9F9F9</div>
-                    </div>
-                    <span id="paletteENEC" class="hidden">#1E40FB, #FC0019, #FECF2F, #1FD025, #434344, #F9F9F9</span>
-                    <button onclick="copyToClipboard('paletteENEC', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
+        <a id="redirectBtn" href="https://glauberlasantiago.github.io/gl-cores-fontes-e-fundos/paletas.html" class="btn-primary">
+            Acessar o Novo App Agora ➔
+        </a>
 
-            <div class="text-center my-12">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">Paletas Temáticas</h2>
-                <hr class="w-24 h-1 bg-blue-500 mx-auto mt-2 mb-4 border-0 rounded">
-            </div>
+        <div class="countdown">
+            Redirecionando automaticamente em <strong id="timer">3</strong> segundos...
+        </div>
 
-            <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Animação Anos 1950</h3>
-            
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Desenho Clássico</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #F2D499;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#F2D499</div>
-                        <div style="background-color: #8E6B4D;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#8E6B4D</div>
-                        <div style="background-color: #C45E4D;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#C45E4D</div>
-                        <div style="background-color: #5B8E7D;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#5B8E7D</div>
-                        <div style="background-color: #F7F5E6;" class="flex-1 flex items-center justify-center text-xs font-medium text-black border">#F7F5E6</div>
-                    </div>
-                    <span id="palette7" class="hidden">#F2D499, #8E6B4D, #C45E4D, #5B8E7D, #F7F5E6</span>
-                    <button onclick="copyToClipboard('palette7', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Moderno Meio-Séc</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #F5B895;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#F5B895</div>
-                        <div style="background-color: #3D5A80;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#3D5A80</div>
-                        <div style="background-color: #98C1D9;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#98C1D9</div>
-                        <div style="background-color: #E0FBFC;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#E0FBFC</div>
-                        <div style="background-color: #293241;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#293241</div>
-                    </div>
-                    <span id="palette8" class="hidden">#F5B895, #3D5A80, #98C1D9, #E0FBFC, #293241</span>
-                    <button onclick="copyToClipboard('palette8', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Lanchonete Retrô</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #FAD02C;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#FAD02C</div>
-                        <div style="background-color: #ED2939;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#ED2939</div>
-                        <div style="background-color: #A2D2FF;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#A2D2FF</div>
-                        <div style="background-color: #FFFFFF;" class="flex-1 flex items-center justify-center text-xs font-medium text-black border">#FFFFFF</div>
-                        <div style="background-color: #333333;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#333333</div>
-                    </div>
-                    <span id="palette9" class="hidden">#FAD02C, #ED2939, #A2D2FF, #FFFFFF, #333333</span>
-                    <button onclick="copyToClipboard('palette9', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Estilo Anos 1970</h3>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Tons Terrosos</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #783F04;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#783F04</div>
-                        <div style="background-color: #E8871E;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#E8871E</div>
-                        <div style="background-color: #F5D547;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#F5D547</div>
-                        <div style="background-color: #9C9B7A;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#9C9B7A</div>
-                        <div style="background-color: #D4CFC9;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#D4CFC9</div>
-                    </div>
-                    <span id="palette10" class="hidden">#783F04, #E8871E, #F5D547, #9C9B7A, #D4CFC9</span>
-                    <button onclick="copyToClipboard('palette10', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Groove Psicodélico</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #F9A03F;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#F9A03F</div>
-                        <div style="background-color: #D90368;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#D90368</div>
-                        <div style="background-color: #820263;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#820263</div>
-                        <div style="background-color: #291720;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#291720</div>
-                        <div style="background-color: #04A777;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#04A777</div>
-                    </div>
-                    <span id="palette11" class="hidden">#F9A03F, #D90368, #820263, #291720, #04A777</span>
-                    <button onclick="copyToClipboard('palette11', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Pós-Apocalíptico</h3>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Terra Devastada</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #5E5A56;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#5E5A56</div>
-                        <div style="background-color: #7A6C5D;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#7A6C5D</div>
-                        <div style="background-color: #A98C6F;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#A98C6F</div>
-                        <div style="background-color: #4E5340;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#4E5340</div>
-                        <div style="background-color: #B9314F;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#B9314F</div>
-                    </div>
-                    <span id="palette12" class="hidden">#5E5A56, #7A6C5D, #A98C6F, #4E5340, #B9314F</span>
-                    <button onclick="copyToClipboard('palette12', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Precipitação Nuclear</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #2F3D40;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#2F3D40</div>
-                        <div style="background-color: #9D9D9D;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#9D9D9D</div>
-                        <div style="background-color: #C5D16B;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#C5D16B</div>
-                        <div style="background-color: #F7CE5B;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#F7CE5B</div>
-                        <div style="background-color: #6E260E;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#6E260E</div>
-                    </div>
-                    <span id="palette13" class="hidden">#2F3D40, #9D9D9D, #C5D16B, #F7CE5B, #6E260E</span>
-                    <button onclick="copyToClipboard('palette13', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Decadência Urbana</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #313638;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#313638</div>
-                        <div style="background-color: #535C68;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#535C68</div>
-                        <div style="background-color: #8B0000;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#8B0000</div>
-                        <div style="background-color: #BDB76B;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#BDB76B</div>
-                        <div style="background-color: #D3D3D3;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#D3D3D3</div>
-                    </div>
-                    <span id="palette14" class="hidden">#313638, #535C68, #8B0000, #BDB76B, #D3D3D3</span>
-                    <button onclick="copyToClipboard('palette14', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Inspiração Asiática</h3>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Jardim Zen</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #D7CEC7;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#D7CEC7</div>
-                        <div style="background-color: #A3A380;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#A3A380</div>
-                        <div style="background-color: #464D4A;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#464D4A</div>
-                        <div style="background-color: #FFFFFF;" class="flex-1 flex items-center justify-center text-xs font-medium text-black border">#FFFFFF</div>
-                        <div style="background-color: #BF695E;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#BF695E</div>
-                    </div>
-                    <span id="palette15" class="hidden">#D7CEC7, #A3A380, #464D4A, #FFFFFF, #BF695E</span>
-                    <button onclick="copyToClipboard('palette15', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">China Imperial</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #DAA520;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#DAA520</div>
-                        <div style="background-color: #DC143C;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#DC143C</div>
-                        <div style="background-color: #000080;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#000080</div>
-                        <div style="background-color: #4682B4;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#4682B4</div>
-                        <div style="background-color: #F5F5DC;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#F5F5DC</div>
-                    </div>
-                    <span id="palette16" class="hidden">#DAA520, #DC143C, #000080, #4682B4, #F5F5DC</span>
-                    <button onclick="copyToClipboard('palette16', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Neon de Tóquio</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #FF00FF;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#FF00FF</div>
-                        <div style="background-color: #00FFFF;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#00FFFF</div>
-                        <div style="background-color: #FFD700;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#FFD700</div>
-                        <div style="background-color: #1E1E1E;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#1E1E1E</div>
-                        <div style="background-color: #9400D3;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#9400D3</div>
-                    </div>
-                    <span id="palette17" class="hidden">#FF00FF, #00FFFF, #FFD700, #1E1E1E, #9400D3</span>
-                    <button onclick="copyToClipboard('palette17', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mt-10 mb-2">Tema: Filme "O Iluminado"</h3>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Tapete do Overlook</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #9B2305;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#9B2305</div>
-                        <div style="background-color: #CF6F0A;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#CF6F0A</div>
-                        <div style="background-color: #581F08;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#581F08</div>
-                        <div style="background-color: #000000;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#000000</div>
-                        <div style="background-color: #F5F5F5;" class="flex-1 flex items-center justify-center text-xs font-medium text-black border">#F5F5F5</div>
-                    </div>
-                    <span id="palette18" class="hidden">#9B2305, #CF6F0A, #581F08, #000000, #F5F5F5</span>
-                    <button onclick="copyToClipboard('palette18', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Quarto 237</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #70E0A6;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#70E0A6</div>
-                        <div style="background-color: #B57EDC;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#B57EDC</div>
-                        <div style="background-color: #E6E6FA;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#E6E6FA</div>
-                        <div style="background-color: #36454F;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#36454F</div>
-                        <div style="background-color: #F8F8FF;" class="flex-1 flex items-center justify-center text-xs font-medium text-black border">#F8F8FF</div>
-                    </div>
-                    <span id="palette19" class="hidden">#70E0A6, #B57EDC, #E6E6FA, #36454F, #F8F8FF</span>
-                    <button onclick="copyToClipboard('palette19', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Hotel Assombrado</h4>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div style="background-color: #4682B4;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#4682B4</div>
-                        <div style="background-color: #CD5C5C;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#CD5C5C</div>
-                        <div style="background-color: #F5DEB3;" class="flex-1 flex items-center justify-center text-xs font-medium text-black">#F5DEB3</div>
-                        <div style="background-color: #8B4513;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#8B4513</div>
-                        <div style="background-color: #2F4F4F;" class="flex-1 flex items-center justify-center text-xs font-medium text-white">#2F4F4F</div>
-                    </div>
-                    <span id="palette20" class="hidden">#4682B4, #CD5C5C, #F5DEB3, #8B4513, #2F4F4F</span>
-                    <button onclick="copyToClipboard('palette20', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700">Copiar Cores</button>
-                </div>
-            </div>
-
-            <div class="text-center my-12">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">Paletas Originais</h2>
-                <hr class="w-24 h-1 bg-blue-500 mx-auto mt-2 mb-4 border-0 rounded">
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Doce Sonho Pastel</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#FFB6C1;">#FFB6C1</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#ADD8E6;">#ADD8E6</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#F0E68C;">#F0E68C</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#98FB98;">#98FB98</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#DDA0DD;">#DDA0DD</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black border" style="background-color:#FFFFFF;">#FFFFFF</div>
-                    </div>
-                    <span id="palette1" class="hidden">#FFB6C1, #ADD8E6, #F0E68C, #98FB98, #DDA0DD, #FFFFFF</span>
-                    <button onclick="copyToClipboard('palette1', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Jardim de Primavera</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#A7D7C5;">#A7D7C5</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#F7F4E9;">#F7F4E9</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#F6DFEB;">#F6DFEB</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#E4BAD4;">#E4BAD4</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#C490D1;">#C490D1</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#756D79;">#756D79</div>
-                    </div>
-                    <span id="palette2" class="hidden">#A7D7C5, #F7F4E9, #F6DFEB, #E4BAD4, #C490D1, #756D79</span>
-                    <button onclick="copyToClipboard('palette2', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pôr do Sol no Cerrado</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#FF6F61;">#FF6F61</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#D83F87;">#D83F87</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#4A4E69;">#4A4E69</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#F9A828;">#F9A828</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#F2E9E4;">#F2E9E4</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#22223B;">#22223B</div>
-                    </div>
-                    <span id="palette3" class="hidden">#FF6F61, #D83F87, #4A4E69, #F9A828, #F2E9E4, #22223B</span>
-                    <button onclick="copyToClipboard('palette3', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Névoa da Manhã</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#CAD2C5;">#CAD2C5</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#A7BEAE;">#A7BEAE</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#84A98C;">#84A98C</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#6B9080;">#6B9080</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#55766B;">#55766B</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#F0EFEB;">#F0EFEB</div>
-                    </div>
-                    <span id="palette4" class="hidden">#CAD2C5, #A7BEAE, #84A98C, #6B9080, #55766B, #F0EFEB</span>
-                    <button onclick="copyToClipboard('palette4', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Joias Tropicais</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#00A896;">#00A896</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#028090;">#028090</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#F0E68C;">#F0E68C</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#E53D00;">#E53D00</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#7209B7;">#7209B7</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black border" style="background-color:#FFFFFF;">#FFFFFF</div>
-                    </div>
-                    <span id="palette5" class="hidden">#00A896, #028090, #F0E68C, #E53D00, #7209B7, #FFFFFF</span>
-                    <button onclick="copyToClipboard('palette5', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Oceano Profundo</h3>
-                    <div class="flex h-24 rounded-lg overflow-hidden mb-4">
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#001219;">#001219</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#005F73;">#005F73</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-white" style="background-color:#0A9396;">#0A9396</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#94D2BD;">#94D2BD</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#E9D8A6;">#E9D8A6</div>
-                        <div class="flex-1 flex items-center justify-center text-xs font-medium text-black" style="background-color:#EE9B00;">#EE9B00</div>
-                    </div>
-                    <span id="palette6" class="hidden">#001219, #005F73, #0A9396, #94D2BD, #E9D8A6, #EE9B00</span>
-                    <button onclick="copyToClipboard('palette6', this)" class="w-full sm:w-auto bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all">
-                        Copiar Cores
-                    </button>
-                </div>
-            </div>
-
-        </main>
+        <div>
+            <a href="https://github.com/GlauberLASantiago/gl-cores-fontes-e-fundos" class="repo-link">
+                Ver repositório no GitHub: GlauberLASantiago/gl-cores-fontes-e-fundos ↗
+            </a>
+        </div>
     </div>
 
     <script>
-        // Função para copiar o texto para a área de transferência
-        function copyToClipboard(elementId, button) {
-            // Obtém os códigos das cores do elemento span oculto
-            const colorCodes = document.getElementById(elementId).innerText;
-            // Adiciona o texto introdutório
-            const textToCopy = "Utilize a seguinte paleta de cores: " + colorCodes;
-            
-            // Cria um elemento de input temporário para usar o execCommand
-            const tempInput = document.createElement('textarea');
-            tempInput.style.position = 'absolute';
-            tempInput.style.left = '-9999px';
-            tempInput.value = textToCopy;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            
-            try {
-                // Tenta copiar o texto
-                document.execCommand('copy');
-                
-                // Fornece feedback visual ao usuário
-                const originalText = button.innerText;
-                button.innerText = 'Copiado!';
-                button.classList.add('bg-green-600', 'hover:bg-green-700');
-                button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+        let seconds = 3;
+        const timerEl = document.getElementById('timer');
+        const targetUrl = "https://glauberlasantiago.github.io/gl-cores-fontes-e-fundos/paletas.html";
 
-                // Volta ao texto original após 2 segundos
-                setTimeout(() => {
-                    button.innerText = originalText;
-                    button.classList.remove('bg-green-600', 'hover:bg-green-700');
-                    button.classList.add('bg-blue-600', 'hover:bg-blue-700');
-                }, 2000);
-
-            } catch (err) {
-                // Log de erro caso a cópia falhe
-                console.error('Falha ao copiar texto: ', err);
-                // Fallback para o usuário caso execCommand não funcione
-                alert('Não foi possível copiar as cores automaticamente. Por favor, tente manualmente.');
-            } finally {
-                // Remove o elemento de input temporário
-                document.body.removeChild(tempInput);
+        const interval = setInterval(() => {
+            seconds--;
+            if (timerEl) timerEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.replace(targetUrl);
             }
-        }
+        }, 1000);
     </script>
 </body>
 </html>
